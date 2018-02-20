@@ -37,7 +37,7 @@ travelSearch.getCountry = (userHappiness, userForest, userInternet) => {
         dataType: 'json',
         method: 'GET',
         data: {
-            api_key: '9524b504493adb49',
+            api_key: 'e2edb06faefe2dc6',
             format: 'json',
             cmd: 'getWorldData',
             data: 'happiness_index,forest_area_percent,density,size,bigmac_index,internetusers_percent,corruption_index,tourist_arrivals,size,population'
