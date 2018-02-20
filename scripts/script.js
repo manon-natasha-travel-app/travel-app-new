@@ -33,14 +33,18 @@ travelSearch.filterCountry = () => {
 
 travelSearch.getCountry = (userHappiness, userForest, userInternet) => {
     $.ajax({
-        url: 'http://inqstatsapi.inqubu.com',
+        url: 'https://proxy.hackeryou.com',
+        method: 'GET',
         dataType: 'json',
         method: 'GET',
         data: {
-            api_key: 'e2edb06faefe2dc6',
-            format: 'json',
-            cmd: 'getWorldData',
-            data: 'happiness_index,forest_area_percent,density,size,bigmac_index,internetusers_percent,corruption_index,tourist_arrivals,size,population'
+            reqUrl: 'http://inqstatsapi.inqubu.com',
+            params: {
+                api_key: 'e2edb06faefe2dc6',
+                format: 'json',
+                cmd: 'getWorldData',
+                data: 'happiness_index,forest_area_percent,density,size,bigmac_index,internetusers_percent,corruption_index,tourist_arrivals,size,population'
+            }
         }
     }).then(function (res) {
         console.log('res',res);
